@@ -1,8 +1,5 @@
-const removeFromArray = function() {
-    const arr = arguments[0];
-    const args = Array.from(arguments).slice(1);
-    const index = arr.indexOf(args[0]);
-    console.log(index);
+const removeFromArray = function(arr, ...toRemove) {
+    return arr.filter((item) => !toRemove.includes(item));
 };
 
 // testArguments: [1, 2, 3, 4], 3
